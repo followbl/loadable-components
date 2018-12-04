@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/client/letters/D.js"],"names":[],"mappings":"oLAAe,KAAM","file":"4.js","sourcesContent":["export default () => 'D'\n"],"sourceRoot":""}

@@ -1,0 +1,2 @@
+(window.__LOADABLE_LOADED_CHUNKS__=window.__LOADABLE_LOADED_CHUNKS__||[]).push([[1],{30:function(t,e,n){"use strict";n.r(e);var r=n(11),u=n(12),_=n(14),c=n(13),i=n(15),a=n(0),o=function(t){function e(){return Object(r.a)(this,e),Object(_.a)(this,Object(c.a)(e).apply(this,arguments))}return Object(i.a)(e,t),Object(u.a)(e,[{key:"render",value:function(){return a.createElement("div",null,"home")}}]),e}(a.Component);e.default=o}}]);
+//# sourceMappingURL=Home.f4e7aa26.chunk.js.map

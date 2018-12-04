@@ -1,0 +1,2 @@
+require("source-map-support/register"),exports.ids=[1],exports.modules={16:function(e,r,t){"use strict";t.r(r);var s=t(0);r.default=class extends s.Component{render(){return s.createElement("div",null,"home")}}}};
+//# sourceMappingURL=Home.map

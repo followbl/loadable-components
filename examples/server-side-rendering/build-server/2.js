@@ -1,0 +1,2 @@
+require("source-map-support/register"),exports.ids=[2],exports.modules={18:function(e,t,r){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.default=void 0;var u,o=(u=r(11))&&u.__esModule?u:{default:u};const s=()=>"B";s.moment=o.default;var d=s;t.default=d}};
+//# sourceMappingURL=2.map

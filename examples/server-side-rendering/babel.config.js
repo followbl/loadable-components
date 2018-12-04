@@ -1,29 +1,33 @@
-const loadableBabelPlugin = require('../../packages/babel-plugin')
 
-function isWebTarget(caller) {
-  return Boolean(caller && caller.target === 'web')
-}
-
-function isWebpack(caller) {
-  return Boolean(caller && caller.name === 'babel-loader')
-}
-
-module.exports = api => {
-  const web = api.caller(isWebTarget)
-  const webpack = api.caller(isWebpack)
-
+module.exports = function(api) {
+  api.cache(true);
   return {
     presets: [
-      '@babel/preset-react',
       [
         '@babel/preset-env',
         {
-          useBuiltIns: web ? 'entry' : undefined,
-          targets: !web ? { node: 'current' } : undefined,
-          modules: webpack ? false : 'commonjs',
+          targets: {
+            node: 'current',
+          },
+          useBuiltIns: 'entry',
+          exclude: ['babel-plugin-transform-regenerator', 'transform-async-to-generator'],
         },
       ],
     ],
-    plugins: ['@babel/plugin-syntax-dynamic-import', loadableBabelPlugin],
-  }
-}
+    plugins: [
+      '@loadable/babel-plugin',
+      '@babel/plugin-transform-modules-commonjs',
+      '@babel/plugin-syntax-object-rest-spread',
+      '@babel/plugin-proposal-class-properties',
+      [
+        'babel-plugin-styled-components',
+        {
+          ssr: true,
+        },
+      ],
+      '@babel/plugin-transform-react-jsx',
+      '@babel/plugin-syntax-dynamic-import',
+      '@babel/plugin-syntax-async-generators',
+    ],
+  };
+};
